@@ -137,7 +137,7 @@ public class BasicTests : IClassFixture<CustomWebApplicationFactory<Program>>
         stopwatch.Stop();
 
         // Assert
-        response.EnsureSuccessStatusCode(); // Status Code 200-299
+        response.EnsureSuccessStatusCode();
         Assert.True(stopwatch.Elapsed < maxResponseTime, $"Response time exceeded {maxResponseTime.TotalSeconds} seconds");
     }
 
