@@ -2009,6 +2009,22 @@
           }
         }
       },
+      "Newtonsoft.Json.Schema/3.0.16": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.Schema.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.Schema.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NuGet.Common/6.9.1": {
         "type": "package",
         "dependencies": {
@@ -6960,6 +6976,29 @@
         "packageIcon.png"
       ]
     },
+    "Newtonsoft.Json.Schema/3.0.16": {
+      "sha512": "WhxJY3VdIdtWv4OelY87fFYai3ztqzpVAODXcVo5VlczWjsHqJx/PHAruvrfCJrkCT/RNXj0NYmnUiJt3WcD3A==",
+      "type": "package",
+      "path": "newtonsoft.json.schema/3.0.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net35/Newtonsoft.Json.Schema.dll",
+        "lib/net35/Newtonsoft.Json.Schema.xml",
+        "lib/net40/Newtonsoft.Json.Schema.dll",
+        "lib/net40/Newtonsoft.Json.Schema.xml",
+        "lib/net45/Newtonsoft.Json.Schema.dll",
+        "lib/net45/Newtonsoft.Json.Schema.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.Schema.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.Schema.xml",
+        "newtonsoft.json.schema.3.0.16.nupkg.sha512",
+        "newtonsoft.json.schema.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "NuGet.Common/6.9.1": {
       "sha512": "FbuWZBjQ1NJXBDqCwSddN2yvw3Plq3sTCIh0nc66Hu8jrNr+BOaxlKZv78jvJ+pSy8BvurYOdF9sl9KoORjrtg==",
       "type": "package",
@@ -8694,6 +8733,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
+      "Newtonsoft.Json.Schema >= 3.0.16",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -8703,11 +8743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Works\\ColaboratorQ\\webapi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Works\\ColaboratorQ\\webapi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\naguiar\\.nuget\\packages\\",
-      "outputPath": "C:\\Works\\ColaboratorQ\\WebApi\\obj\\",
+      "outputPath": "C:\\Works\\ColaboratorQ\\webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\naguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8772,6 +8812,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.2, )"
+          },
+          "Newtonsoft.Json.Schema": {
+            "target": "Package",
+            "version": "[3.0.16, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -42,5 +42,11 @@ public class AbsanteeContext : DbContext
 		// modelBuilder.Entity<Colaborator>()
         // 	.HasKey(c => c.Email);
 
+		modelBuilder.Entity<ColaboratorDataModel>(entity => {
+       	entity.HasIndex(e => e.Email).IsUnique();
+		
+    });
+
 	}
+	
 }

@@ -29,8 +29,8 @@ C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfi
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.dll
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Works\ColaboratorQ\Domain\obj\Debug\net8.0\Domain.sourcelink.json

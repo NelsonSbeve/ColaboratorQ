@@ -1,0 +1,6 @@
+{
+  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Works\\ColaboratorQ\\Application",
+  "DataModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Works\\ColaboratorQ\\DataModel",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Works\\ColaboratorQ\\Domain",
+  "WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Works\\ColaboratorQ\\WebApi"
+}

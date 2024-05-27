@@ -20,7 +20,7 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
-string queueName = args.Length > 0 ? args[0] : "colab_logs";
+string queueName = "Q1";
 var port = GetPortForQueue(queueName);
 
 // Add services to the container.
@@ -88,3 +88,5 @@ static int GetPortForQueue(string queueName)
     int queueIndex = int.Parse(queueName.Substring(1)); // Extract the numeric part of the queue name (assuming it starts with 'Q')
     return basePort + queueIndex;
 }
+
+public partial class Program { }
