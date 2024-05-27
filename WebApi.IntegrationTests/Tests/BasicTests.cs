@@ -136,7 +136,7 @@ public class BasicTests : IClassFixture<CustomWebApplicationFactory<Program>>
         var response = await _client.GetAsync("/api/colaborator");
         stopwatch.Stop();
 
-        // Assert
+        // assert
         response.EnsureSuccessStatusCode();
         Assert.True(stopwatch.Elapsed < maxResponseTime, $"Response time exceeded {maxResponseTime.TotalSeconds} seconds");
     }
