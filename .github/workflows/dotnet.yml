@@ -17,11 +17,16 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Cache NuGet packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/ColaboratorQ.sln') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
       - name: Restore dependencies
         run: dotnet restore ColaboratorQ.sln
-        cache:
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/ColaboratorQ.sln') }}
-          path: ~/.nuget/packages
 
       - name: Build
         run: dotnet build ColaboratorQ.sln --no-restore --configuration Release
@@ -38,11 +43,16 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Cache NuGet packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/ColaboratorQ.sln') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
       - name: Restore dependencies
         run: dotnet restore ColaboratorQ.sln
-        cache:
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/ColaboratorQ.sln') }}
-          path: ~/.nuget/packages
 
       - name: Run unit tests
         run: dotnet test ColaboratorQ.sln --filter FullyQualifiedName~Domain.Tests --configuration Release
