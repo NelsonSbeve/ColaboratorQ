@@ -8,13 +8,14 @@ using DataModel.Mapper;
 using Domain.Factory;
 using Domain.IRepository;
 using Microsoft.OpenApi.Models;
-using Microsoft.OpenApi.Any;
 using RabbitMQ.Client;
-
-
-
+using Microsoft.OpenApi.Any;
+ 
 var builder = WebApplication.CreateBuilder(args);
-var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+ 
+var config = builder.Configuration;
+var config2 = builder.Configuration;
+ 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -25,9 +26,18 @@ builder.Services.AddCors(options =>
                    .AllowAnyHeader();
         });
 });
+ 
+string queueNameArg = Array.Find(args, arg => arg.Contains("--queueName"));
 string queueName = "Q1";
+ 
+// if (queueNameArg != null)
+//     queueName = queueNameArg.Split('=')[1];
+// else
+//     queueName = config["queueName"] ?? config.GetConnectionString("queueName");
+ 
+ 
 var port = GetPortForQueue(queueName);
-
+ 
 var HostName = "rabbitmq";
 var PortMQ = "5672";
 var UserName = "guest";
@@ -43,7 +53,9 @@ builder.Services.AddSingleton<IConnectionFactory>(sp =>
         Password = Password
     };
 });
-
+ 
+builder.Services.AddControllers();
+ 
 var DBConnectionString = config.GetConnectionString("DBConnectionString");
  
 builder.Services.AddDbContext<AbsanteeContext>(options =>
@@ -55,23 +67,7 @@ builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
 {
     options.UseNpgsql(DBConnectionString);
 }, ServiceLifetime.Scoped);
-
-Console.WriteLine("DBConnectionString: " + DBConnectionString);
-
-RabbitMqConfiguration rabbitMqConfig = config.DefineRabbitMqConfiguration();
-Console.WriteLine("RabbitMqConfig: " + rabbitMqConfig.Hostname);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-builder.Services.AddDbContext<AbsanteeContext>(opt =>
-    //opt.UseInMemoryDatabase("AbsanteeList")
-    //opt.UseSqlite("Data Source=AbsanteeDatabase.sqlite")
-    opt.UseSqlite(Host.CreateApplicationBuilder().Configuration.GetConnectionString(queueName))
-    );
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+ 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
     opt.MapType<DateOnly>(() => new OpenApiSchema
@@ -81,45 +77,47 @@ builder.Services.AddSwaggerGen(opt =>
         Example = new OpenApiString(DateTime.Today.ToString("yyyy-MM-dd"))
     })
 );
-
-
+ 
 builder.Services.AddTransient<IColaboratorRepository, ColaboratorRepository>();
 builder.Services.AddTransient<IColaboratorFactory, ColaboratorFactory>();
 builder.Services.AddTransient<ColaboratorMapper>();
 builder.Services.AddTransient<ColaboratorService>();
-builder.Services.AddSingleton<IColaboratorConsumer, ColaboratorConsumer>();
-
-
+builder.Services.AddSingleton<IRabbitMQConsumerController, ColaboratorConsumer>();
+ 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+ 
+// var rabbitMQConsumerServices = app.Services.GetServices<ColaboratorConsumer>();
+// foreach (var service in rabbitMQConsumerServices)
+// {
+//     service.ConfigQueue(queueName);
+//     service.StartConsuming();
+// }
+ 
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-app.UseCors("AllowAllOrigins");
-
-
-var rabbitMQConsumerService = app.Services.GetRequiredService<IColaboratorConsumer>();
-rabbitMQConsumerService.StartColaboratorConsuming(queueName);
+// }
  
-
+app.UseHttpsRedirection();
+ 
+app.UseAuthorization();
+ 
+app.UseCors("AllowAllOrigins");
+ 
+app.MapControllers();
+ 
+var rabbitMQConsumerService = app.Services.GetRequiredService<IRabbitMQConsumerController>();
+rabbitMQConsumerService.ConfigQueue(queueName);
+rabbitMQConsumerService.StartConsuming();
+ 
 app.Run();
-
+ 
 static int GetPortForQueue(string queueName)
 {
-    // Implement logic to map queue name to a unique port number
-    // Example: Assign a unique port number based on the queue name suffix
-    int basePort = 5000; // Start from port 5000
-    int queueIndex = int.Parse(queueName.Substring(1)); // Extract the numeric part of the queue name (assuming it starts with 'Q')
+    int basePort = 5010;
+    int queueIndex = int.Parse(queueName.Substring(1));
     return basePort + queueIndex;
 }
-
+ 
 public partial class Program { }

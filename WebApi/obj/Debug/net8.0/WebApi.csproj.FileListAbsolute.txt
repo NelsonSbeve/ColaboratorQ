@@ -1157,6 +1157,8 @@ C:\Works\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Works\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Works\ColaboratorQ\WebApi\obj\Debug\net8.0\ref\WebApi.dll
 C:\Works\ColaboratorQ\WebApi\bin\Debug\net8.0\Newtonsoft.Json.Schema.dll
+<<<<<<< HEAD
+=======
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.csproj.AssemblyReference.cache
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
@@ -1168,6 +1170,7 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.source
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\refint\WebApi.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.pdb
+>>>>>>> main
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\appsettings.json
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\WebApi.exe
@@ -1527,6 +1530,11 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Microsoft.Win
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Newtonsoft.Json.Schema.dll
+<<<<<<< HEAD
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+=======
+>>>>>>> main
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\NuGet.Common.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\NuGet.Configuration.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
@@ -1734,6 +1742,17 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Domain.dll
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Domain.pdb
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\DataModel.pdb
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Application.pdb
+<<<<<<< HEAD
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.csproj.AssemblyReference.cache
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfoInputs.cache
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.AssemblyInfo.cs
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
+=======
+>>>>>>> main
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -1743,5 +1762,11 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\staticwebasse
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\scopedcss\bundle\WebApi.styles.css
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.csproj.Up2Date
+<<<<<<< HEAD
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\refint\WebApi.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.pdb
+=======
+>>>>>>> main
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\ref\WebApi.dll

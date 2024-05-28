@@ -8,19 +8,22 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using static System.Formats.Asn1.AsnWriter;
 
-public class ColaboratorConsumer : IColaboratorConsumer
+public class ColaboratorConsumer : IRabbitMQConsumerController
 {
     private readonly IModel _channel;
     
     private readonly IServiceScopeFactory _serviceScopeFactory;
 
-     List<string> _errorMessages = new List<string>();
+    private readonly IConnectionFactory _connectionFactory;
 
-    public ColaboratorConsumer(IServiceScopeFactory serviceScopeFactory)
+     List<string> _errorMessages = new List<string>();
+    private string _queueName;
+
+    public ColaboratorConsumer(IServiceScopeFactory serviceScopeFactory, IConnectionFactory connectionFactory)
     {
          _serviceScopeFactory = serviceScopeFactory;
-        var factory = new ConnectionFactory { HostName = "localhost" };
-        var connection = factory.CreateConnection();
+        _connectionFactory = connectionFactory;
+        var connection = connectionFactory.CreateConnection();
         _channel = connection.CreateModel();
 
         _channel.ExchangeDeclare(exchange: "colab_logs", type: ExchangeType.Fanout);
@@ -30,11 +33,26 @@ public class ColaboratorConsumer : IColaboratorConsumer
         Console.WriteLine(" [*] Waiting for Collaborator messages.");
     }
 
-    public void StartColaboratorConsuming(string queueName)
+    public void ConfigQueue(string queueName)
+        {
+            _queueName = queueName;
+ 
+            _channel.QueueDeclare(queue: _queueName,
+                                            durable: true,
+                                            exclusive: false,
+                                            autoDelete: false,
+                                            arguments: null);
+ 
+            _channel.QueueBind(queue: _queueName,
+                  exchange: "colab_logs",
+                  routingKey: "colabKey");
+        }
+        
+    public void StartConsuming()
     {
 
-        _channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
-        _channel.QueueBind(queue: queueName, exchange: "colab_logs", routingKey: "colabKey");
+        // _channel.QueueDeclare(queue: queueName, durable: true, exclusive: false, autoDelete: false);
+        // _channel.QueueBind(queue: queueName, exchange: "colab_logs", routingKey: "colabKey");
 
         var consumer = new EventingBasicConsumer(_channel);
         consumer.Received += async (model, ea) =>
@@ -62,6 +80,6 @@ public class ColaboratorConsumer : IColaboratorConsumer
             Console.WriteLine($" [ColaboratorConsumer] {message}");
         };
 
-        _channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+        _channel.BasicConsume(queue: _queueName, autoAck: true, consumer: consumer);
     }
 }

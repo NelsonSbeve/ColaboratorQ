@@ -28,7 +28,11 @@ Console.WriteLine("appsettings AbsanteeDatabase: " + dbConnectionString2);
     Console.WriteLine("RABBITMQ_HOSTNAME by config: " + rabbitMqHostname);
         string rabbitMqUsername = config["RABBITMQ_USERNAME"];
 Console.WriteLine("RABBITMQ_USERNAME by config: " + rabbitMqUsername);
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> main
         string rabbitMqPassword = config["RABBITMQ_PASSWORD"];        
 Console.WriteLine("RABBITMQ_PASSWORD by config: " + rabbitMqPassword);
         if( string.IsNullOrWhiteSpace(rabbitMqHostname) ||
