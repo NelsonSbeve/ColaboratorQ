@@ -1,8 +1,5 @@
 version: '3.8'
-<<<<<<< HEAD
  
-=======
->>>>>>> main
 services:
   webapi:
     image: absantee
@@ -10,17 +7,12 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-<<<<<<< HEAD
       - "5041:8080"
-=======
-      - "5005:8080"
->>>>>>> main
       # - target: 8080
       #   published: 5005
       #   protocol: tcp
       #   mode: ingress
     depends_on:
-<<<<<<< HEAD
       - postgres
       #- postgresdb2
       - rabbitmq
@@ -29,25 +21,13 @@ services:
       - RABBITMQ_HOSTNAME=rabbitmq
       - RABBITMQ_USERNAME=guest
       - RABBITMQ_PASSWORD=guest
-=======
-      - postgresdb1
-      #- postgresdb2
-      - rabbitmq
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Containerized
-      - DB_CONNECTION=Host=absanteepriv-postgresdb1-1;Database=absantee;Username=postgres;Password=password
->>>>>>> main
       #- DB_CONNECTION_STRING=Host=postgresdb{{.Task.Slot}};Database=absantee;Username=postgres;Password=password
       # - TASK_NAME={{.Task.Name}}
       # - TASK_SLOT={{.Task.Slot}}
       # - NODE_ID={{.Node.ID}}
       # - SERVICE_ID={{.Service.ID}}
     networks:
-<<<<<<< HEAD
       - absantee_network
-=======
-      - backend
->>>>>>> main
     # deploy:
     #   #mode: replicated
     #   replicas: 2
@@ -60,12 +40,8 @@ services:
     #   options:
     #     max-size: "10m"
     #     max-file: "3"
-<<<<<<< HEAD
  
   postgres:
-=======
-  postgresdb1:
->>>>>>> main
     image: postgres:latest
     restart: always
     ports:
@@ -78,12 +54,8 @@ services:
     volumes:
       - "postgres-data_1:/var/lib/postgresql/data"
     networks:
-<<<<<<< HEAD
       - absantee_network
  
-=======
-      - backend
->>>>>>> main
   # postgresdb2:
   #   image: postgres:alpine
   #   restart: always
@@ -101,10 +73,7 @@ services:
   #     - "postgres-data_2:/var/lib/postgresql/data"
   #   networks:
   #     - backend
-<<<<<<< HEAD
  
-=======
->>>>>>> main
   rabbitmq:
     image: rabbitmq:3-management
     restart: always
@@ -112,7 +81,6 @@ services:
       - "5672:5672"  # RabbitMQ main port
       - "15672:15672"  # RabbitMQ management UI
     environment:
-<<<<<<< HEAD
       - RABBITMQ_HOSTNAME=rabbitmq
       - RABBITMQ_USERNAME=guest
       - RABBITMQ_PASSWORD=guest
@@ -127,18 +95,3 @@ networks:
 volumes:
   postgres-data_0:
   postgres-data_1:
-=======
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    networks:
-      - backend
-networks:
-  backend:
-    driver: bridge
-    # driver: overlay
-volumes:
-  postgres-data_0:
-  postgres-data_1:
-  postgres-data_2:
-  postgres-data_3:
->>>>>>> main
