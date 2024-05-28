@@ -1,5 +1,7 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-
 using Application.Services;
 using DataModel.Repository;
 using DataModel.Mapper;
@@ -7,9 +9,12 @@ using Domain.Factory;
 using Domain.IRepository;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Any;
+using RabbitMQ.Client;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -22,6 +27,39 @@ builder.Services.AddCors(options =>
 });
 string queueName = "Q1";
 var port = GetPortForQueue(queueName);
+
+var HostName = "rabbitmq";
+var PortMQ = "5672";
+var UserName = "guest";
+var Password = "guest";
+ 
+builder.Services.AddSingleton<IConnectionFactory>(sp =>
+{
+    return new ConnectionFactory()
+    {
+        HostName = HostName,
+        Port = int.Parse(PortMQ),
+        UserName = UserName,
+        Password = Password
+    };
+});
+
+var DBConnectionString = config.GetConnectionString("DBConnectionString");
+ 
+builder.Services.AddDbContext<AbsanteeContext>(options =>
+{
+    options.UseNpgsql(DBConnectionString);
+});
+ 
+builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
+{
+    options.UseNpgsql(DBConnectionString);
+}, ServiceLifetime.Scoped);
+
+Console.WriteLine("DBConnectionString: " + DBConnectionString);
+
+RabbitMqConfiguration rabbitMqConfig = config.DefineRabbitMqConfiguration();
+Console.WriteLine("RabbitMqConfig: " + rabbitMqConfig.Hostname);
 
 // Add services to the container.
 
@@ -52,11 +90,6 @@ builder.Services.AddTransient<ColaboratorService>();
 builder.Services.AddSingleton<IColaboratorConsumer, ColaboratorConsumer>();
 
 
-
-
-
-
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -78,7 +111,7 @@ var rabbitMQConsumerService = app.Services.GetRequiredService<IColaboratorConsum
 rabbitMQConsumerService.StartColaboratorConsuming(queueName);
  
 
-app.Run($"https://localhost:{port}");
+app.Run();
 
 static int GetPortForQueue(string queueName)
 {
