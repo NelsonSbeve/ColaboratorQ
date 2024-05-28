@@ -1,36 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Works\\ColaboratorQ\\Application\\Application.csproj": {
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Works\\ColaboratorQ\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Works\\ColaboratorQ\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\naguiar\\.nuget\\packages\\",
-        "outputPath": "C:\\Works\\ColaboratorQ\\Application\\obj\\",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\naguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cleopatra/BSimpleCollection/_packaging/Nuget_Packages/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj"
               },
-              "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj"
               }
             }
           }
@@ -75,30 +78,33 @@
         }
       }
     },
-    "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj": {
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj",
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj",
         "projectName": "DataModel",
-        "projectPath": "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj",
-        "packagesPath": "C:\\Users\\naguiar\\.nuget\\packages\\",
-        "outputPath": "C:\\Works\\ColaboratorQ\\DataModel\\obj\\",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj",
+        "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\naguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cleopatra/BSimpleCollection/_packaging/Nuget_Packages/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj"
               }
             }
           }
@@ -171,23 +177,26 @@
         }
       }
     },
-    "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj": {
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\naguiar\\.nuget\\packages\\",
-        "outputPath": "C:\\Works\\ColaboratorQ\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\naguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cleopatra/BSimpleCollection/_packaging/Nuget_Packages/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -229,36 +238,39 @@
         }
       }
     },
-    "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Works\\ColaboratorQ\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\naguiar\\.nuget\\packages\\",
-        "outputPath": "C:\\Works\\ColaboratorQ\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\naguiar\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://cleopatra/BSimpleCollection/_packaging/Nuget_Packages/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Works\\ColaboratorQ\\Application\\Application.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\Application\\Application.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj"
               },
-              "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\DataModel\\DataModel.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\DataModel\\DataModel.csproj"
               },
-              "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Works\\ColaboratorQ\\Domain\\Domain.csproj"
+              "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Domain\\Domain.csproj"
               }
             }
           }
@@ -305,6 +317,10 @@
             "Newtonsoft.Json.Schema": {
               "target": "Package",
               "version": "[3.0.16, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
