@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb5d30d4e8bc96e2372ad1c81000283f41c84273")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0530d24c0764f958b726548c66e2eb6b63997a6c")]
+>>>>>>> main
 [assembly: System.Reflection.AssemblyProductAttribute("DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

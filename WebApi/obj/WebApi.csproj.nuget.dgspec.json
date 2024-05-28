@@ -1,7 +1,11 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {}
+=======
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj": {}
+>>>>>>> main
   },
   "projects": {
     "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj": {
@@ -238,6 +242,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -246,6 +251,16 @@
         "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\obj\\",
+=======
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\obj\\",
+>>>>>>> main
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",

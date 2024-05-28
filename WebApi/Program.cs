@@ -1,3 +1,6 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Application.Services;
 using DataModel.Repository;
@@ -7,12 +10,21 @@ using Domain.IRepository;
 using Microsoft.OpenApi.Models;
 using RabbitMQ.Client;
 using Microsoft.OpenApi.Any;
+<<<<<<< HEAD
  
 var builder = WebApplication.CreateBuilder(args);
  
 var config = builder.Configuration;
 var config2 = builder.Configuration;
  
+=======
+using RabbitMQ.Client;
+
+
+
+var builder = WebApplication.CreateBuilder(args);
+var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+>>>>>>> main
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -34,7 +46,11 @@ string queueName = "Q1";
  
  
 var port = GetPortForQueue(queueName);
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> main
 var HostName = "rabbitmq";
 var PortMQ = "5672";
 var UserName = "guest";
@@ -50,7 +66,30 @@ builder.Services.AddSingleton<IConnectionFactory>(sp =>
         Password = Password
     };
 });
+<<<<<<< HEAD
  
+=======
+
+var DBConnectionString = config.GetConnectionString("DBConnectionString");
+ 
+builder.Services.AddDbContext<AbsanteeContext>(options =>
+{
+    options.UseNpgsql(DBConnectionString);
+});
+ 
+builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
+{
+    options.UseNpgsql(DBConnectionString);
+}, ServiceLifetime.Scoped);
+
+Console.WriteLine("DBConnectionString: " + DBConnectionString);
+
+RabbitMqConfiguration rabbitMqConfig = config.DefineRabbitMqConfiguration();
+Console.WriteLine("RabbitMqConfig: " + rabbitMqConfig.Hostname);
+
+// Add services to the container.
+
+>>>>>>> main
 builder.Services.AddControllers();
  
 var DBConnectionString = config.GetConnectionString("DBConnectionString");
@@ -79,8 +118,14 @@ builder.Services.AddTransient<IColaboratorRepository, ColaboratorRepository>();
 builder.Services.AddTransient<IColaboratorFactory, ColaboratorFactory>();
 builder.Services.AddTransient<ColaboratorMapper>();
 builder.Services.AddTransient<ColaboratorService>();
+<<<<<<< HEAD
 builder.Services.AddSingleton<IRabbitMQConsumerController, ColaboratorConsumer>();
  
+=======
+builder.Services.AddSingleton<IColaboratorConsumer, ColaboratorConsumer>();
+
+
+>>>>>>> main
 var app = builder.Build();
  
 // var rabbitMQConsumerServices = app.Services.GetServices<ColaboratorConsumer>();
@@ -110,6 +155,12 @@ rabbitMQConsumerService.StartConsuming();
  
 app.Run();
  
+<<<<<<< HEAD
+=======
+
+app.Run();
+
+>>>>>>> main
 static int GetPortForQueue(string queueName)
 {
     int basePort = 5010;

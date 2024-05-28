@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "TxpPfJQGHs3V9uBO0/I6QX6esoLau3V/ol9Ycq6FZ942O2wm/DJf253dtnvjZWW39wUqPz+4WWEXhFfFjRfSHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
+=======
+  "dgSpecHash": "i85qMy5KiUOtE70e+AGkPDEcA0o08M46zoG6Q41wARP6C/ZjO7Yv/fIGUXlgkwheS9MSTEypLzbXcpPbY/oXZA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj",
+>>>>>>> main
   "expectedPackageFiles": [
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

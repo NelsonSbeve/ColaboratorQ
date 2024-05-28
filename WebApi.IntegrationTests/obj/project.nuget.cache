@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "WSZ0KX305lIxdpKsPwQRT7ccAG0ewi7Ds5ErmhH4MSrBJ/9gYyyE1kg3HRoEuQ/Jq58FzccphUmD+kJRqarq0Q==",
+=======
+  "dgSpecHash": "1VHpNrfkHVmTo6yRT3iQAZ0KU/DgwQb+caGNY5n3l/WvCAxzvD6W60ng6Ugpk2ZBZakgR4agUuXNuMyxqqoPCQ==",
+>>>>>>> main
   "success": true,
   "projectFilePath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi.IntegrationTests\\WebApi.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -82,11 +86,19 @@
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.3\\microsoft.data.sqlite.core.8.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.diasymreader\\2.0.0\\microsoft.diasymreader.2.0.0.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\8.0.2\\microsoft.dotnet.scaffolding.shared.8.0.2.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.4\\microsoft.entityframeworkcore.8.0.4.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.4\\microsoft.entityframeworkcore.abstractions.8.0.4.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.4\\microsoft.entityframeworkcore.analyzers.8.0.4.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.3\\microsoft.entityframeworkcore.inmemory.8.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.4\\microsoft.entityframeworkcore.relational.8.0.4.nupkg.sha512",
+=======
+    "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.3\\microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
+    "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.3\\microsoft.entityframeworkcore.abstractions.8.0.3.nupkg.sha512",
+    "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.3\\microsoft.entityframeworkcore.analyzers.8.0.3.nupkg.sha512",
+    "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.3\\microsoft.entityframeworkcore.inmemory.8.0.3.nupkg.sha512",
+    "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.3\\microsoft.entityframeworkcore.relational.8.0.3.nupkg.sha512",
+>>>>>>> main
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.3\\microsoft.entityframeworkcore.sqlite.8.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.3\\microsoft.entityframeworkcore.sqlite.core.8.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.3\\microsoft.entityframeworkcore.sqlserver.8.0.3.nupkg.sha512",
@@ -150,8 +162,11 @@
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\newtonsoft.json.schema\\3.0.16\\newtonsoft.json.schema.3.0.16.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
+=======
+>>>>>>> main
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\nuget.common\\6.9.1\\nuget.common.6.9.1.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\nuget.configuration\\6.9.1\\nuget.configuration.6.9.1.nupkg.sha512",
     "C:\\Users\\ffigueiredo\\.nuget\\packages\\nuget.dependencyresolver.core\\6.9.1\\nuget.dependencyresolver.core.6.9.1.nupkg.sha512",
