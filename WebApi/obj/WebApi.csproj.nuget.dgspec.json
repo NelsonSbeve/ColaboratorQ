@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {}
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
     "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\Application\\Application.csproj": {
@@ -238,14 +238,14 @@
         }
       }
     },
-    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj": {
+    "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\WebApi.csproj",
+        "projectPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\ffigueiredo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\webapi\\obj\\",
+        "outputPath": "C:\\Users\\ffigueiredo\\academia\\ColaboratorQ\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ffigueiredo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -325,6 +325,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Testcontainers.RabbitMq": {
+              "target": "Package",
+              "version": "[3.8.0, )"
             }
           },
           "imports": [

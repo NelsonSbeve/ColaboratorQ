@@ -3,13 +3,13 @@ public static class ApplicationBuildExtensions
 {
     public static string DefineDbConnection(this IConfiguration config) {
         string dbConnectionString = config["DB_CONNECTION"];//Environment.GetEnvironmentVariable("DB_CONNECTION");
-        string dbConnectionString2 = config.GetConnectionString("AbsanteeDatabase");
-Console.WriteLine("appsettings AbsanteeDatabase: " + dbConnectionString2);
+        string dbConnectionString2 = config.GetConnectionString("DBConnectionString");
+Console.WriteLine("appsettings DBConnectionString: " + dbConnectionString2);
         if(string.IsNullOrWhiteSpace(dbConnectionString)) {
             dbConnectionString = dbConnectionString2;
         }
         if(string.IsNullOrWhiteSpace(dbConnectionString)) {
-            throw new ArgumentException("Environment variable DB_CONNECTION or appsettings' property AbsanteeDatabase cannot be null or empty");
+            throw new ArgumentException("Environment variable DB_CONNECTION or appsettings' property DBConnectionString cannot be null or empty");
         }
         return dbConnectionString;
     }
@@ -27,10 +27,14 @@ Console.WriteLine("appsettings AbsanteeDatabase: " + dbConnectionString2);
         string rabbitMqHostname = config["RABBITMQ_HOSTNAME"];
     Console.WriteLine("RABBITMQ_HOSTNAME by config: " + rabbitMqHostname);
         string rabbitMqUsername = config["RABBITMQ_USERNAME"];
-Console.WriteLine("RABBITMQ_USERNAME by config: " + rabbitMqUsername);
+    Console.WriteLine("RABBITMQ_USERNAME by config: " + rabbitMqUsername);
         
         string rabbitMqPassword = config["RABBITMQ_PASSWORD"];        
-Console.WriteLine("RABBITMQ_PASSWORD by config: " + rabbitMqPassword);
+    Console.WriteLine("RABBITMQ_PASSWORD by config: " + rabbitMqPassword);
+
+        string rabbitMqPort = config["RABBITMQ_PORT"] ?? config["RabbitMq:Port"];
+    Console.WriteLine("RABBITMQ_PORT by config: " + rabbitMqPort);
+
         if( string.IsNullOrWhiteSpace(rabbitMqHostname) ||
             string.IsNullOrWhiteSpace(rabbitMqUsername) ||
             string.IsNullOrWhiteSpace(rabbitMqPassword) )
@@ -39,7 +43,8 @@ Console.WriteLine("RABBITMQ_PASSWORD by config: " + rabbitMqPassword);
             return new RabbitMqConfiguration {
                 Hostname = rabbitMqHostname,
                 Username = rabbitMqUsername,
-                Password = rabbitMqPassword
+                Password = rabbitMqPassword,
+                Port =  int.Parse(rabbitMqPort)
             };
     }
 }

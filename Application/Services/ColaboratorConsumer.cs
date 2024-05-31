@@ -14,16 +14,16 @@ public class ColaboratorConsumer : IRabbitMQConsumerController
     
     private readonly IServiceScopeFactory _serviceScopeFactory;
 
-    private readonly IConnectionFactory _connectionFactory;
+    private readonly IConnectionFactory _factory;
 
      List<string> _errorMessages = new List<string>();
     private string _queueName;
 
-    public ColaboratorConsumer(IServiceScopeFactory serviceScopeFactory, IConnectionFactory connectionFactory)
+    public ColaboratorConsumer(IServiceScopeFactory serviceScopeFactory, IConnectionFactory factory)
     {
-         _serviceScopeFactory = serviceScopeFactory;
-        _connectionFactory = connectionFactory;
-        var connection = connectionFactory.CreateConnection();
+        _serviceScopeFactory = serviceScopeFactory;
+        _factory = factory;
+        var connection = factory.CreateConnection();
         _channel = connection.CreateModel();
 
         _channel.ExchangeDeclare(exchange: "colab_logs", type: ExchangeType.Fanout);

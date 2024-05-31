@@ -19,10 +19,8 @@ public class BasicTests : IClassFixture<CustomWebApplicationFactory<Program>>
     public BasicTests(CustomWebApplicationFactory<Program> factory)
     {
         _factory = factory;
-        _client = factory.CreateClient(new WebApplicationFactoryClientOptions
-        {
-            AllowAutoRedirect = true
-        });
+        _client = factory.CreateClient();
+
     }
    
     [Theory]

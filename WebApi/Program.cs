@@ -10,7 +10,9 @@ using Domain.IRepository;
 using Microsoft.OpenApi.Models;
 using RabbitMQ.Client;
 using Microsoft.OpenApi.Any;
- 
+
+
+
 var builder = WebApplication.CreateBuilder(args);
  
 var config = builder.Configuration;
@@ -34,25 +36,35 @@ string queueName = "Q1";
 //     queueName = queueNameArg.Split('=')[1];
 // else
 //     queueName = config["queueName"] ?? config.GetConnectionString("queueName");
- 
- 
-var port = GetPortForQueue(queueName);
- 
-var HostName = "rabbitmq";
-var PortMQ = "5672";
-var UserName = "guest";
-var Password = "guest";
- 
-builder.Services.AddSingleton<IConnectionFactory>(sp =>
-{
-    return new ConnectionFactory()
+Console.WriteLine("Environment Development: " + config["ASPNETCORE_ENVIRONMENT"]);
+
+string dbConnectionString = config.DefineDbConnection();
+Console.WriteLine("DBConnectionString: " + dbConnectionString);
+
+RabbitMqConfiguration rabbitMqConfig = config.DefineRabbitMqConfiguration();
+Console.WriteLine("RabbitMqConfig: " + rabbitMqConfig.Hostname);
+
+
+ var port = GetPortForQueue(queueName);
+
+    // // Add services to the container.
+    // var HostName = config["RabbitMQ:HostName"]; // Ensure correct key name
+    // var Port = int.Parse(config["RabbitMQ:Port"]); // Ensure correct key name
+    // var UserName = config["RabbitMQ:UserName"]; // Ensure correct key name
+    // var Password = config["RabbitMQ:Password"];
+
+
+
+    builder.Services.AddSingleton<IConnectionFactory>(sp =>
     {
-        HostName = HostName,
-        Port = int.Parse(PortMQ),
-        UserName = UserName,
-        Password = Password
-    };
-});
+        return new ConnectionFactory()
+        {
+            HostName = rabbitMqConfig.Hostname,
+            UserName = rabbitMqConfig.Username,
+            Password = rabbitMqConfig.Password,
+            Port = rabbitMqConfig.Port
+        };
+    });
  
 builder.Services.AddControllers();
  

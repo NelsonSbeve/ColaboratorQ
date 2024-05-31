@@ -1745,3 +1745,12 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\scopedcss\bun
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.csproj.Up2Date
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Npgsql.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Docker.DotNet.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Docker.DotNet.X509.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Renci.SshNet.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\SshNet.Security.Cryptography.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Testcontainers.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi\bin\Debug\net8.0\Testcontainers.RabbitMq.dll

@@ -1338,3 +1338,10 @@ C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\obj\Debug\net
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\obj\Debug\net8.0\WebApi.IntegrationTests.pdb
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\obj\Debug\net8.0\WebApi.IntegrationTests.genruntimeconfig.cache
 C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\obj\Debug\net8.0\ref\WebApi.IntegrationTests.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\Docker.DotNet.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\Docker.DotNet.X509.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\Renci.SshNet.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\SshNet.Security.Cryptography.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\Testcontainers.dll
+C:\Users\ffigueiredo\academia\ColaboratorQ\WebApi.IntegrationTests\bin\Debug\net8.0\Testcontainers.RabbitMq.dll
