@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQ.Client;
 using Testcontainers.RabbitMq;
-
+using DotNet.Testcontainers.Configurations;
 
 
 
@@ -82,6 +82,7 @@ public class CustomWebApplicationFactory<TProgram>
 
     public async Task InitializeAsync()
     {
+        TestcontainersSettings.ResourceReaperEnabled = false;
         _rabbitMqContainer = new RabbitMqBuilder()
             .WithImage("rabbitmq:3.13-management")
             .WithPortBinding(5672, true)
